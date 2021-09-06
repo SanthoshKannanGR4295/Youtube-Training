@@ -2,6 +2,7 @@
     "name": "portfolio",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://santhoshkannangr4295.github.io/Youtube-Training",
     "dependencies": {
         "@material-ui/core": "latest",
         "@material-ui/icons": "latest",

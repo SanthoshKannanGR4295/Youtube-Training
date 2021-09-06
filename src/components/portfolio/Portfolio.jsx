@@ -3,11 +3,11 @@ import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
 import Rating from "@material-ui/lab/Rating";
 import {
-    featuredPortfolio,
-    webPortfolio,
-    mobilePortfolio,
-    designPortfolio,
-    contentPortfolio,
+    javaTechnologiesPortfolio,
+    webDevelopmentPortfolio,
+    databasePortfolio,
+    dotnetPortfolio,
+    progLangsPortfolio,
 } from "../../data";
 import { withStyles } from "@material-ui/styles";
 import { Star } from "@material-ui/icons";
@@ -25,50 +25,50 @@ const StyledRating = withStyles({
 })(Rating);
 
 export default function Portfolio() {
-    const [selected, setSelected] = useState("featured");
+    const [selected, setSelected] = useState("javatech");
     const [data, setData] = useState([]);
     const list = [
         {
-            id: "featured",
-            title: "Featured",
+            id: "javatech",
+            title: "Java",
         },
         {
             id: "web",
-            title: "Web App",
+            title: "Web Development",
         },
         {
-            id: "mobile",
-            title: "Mobile App",
+            id: "database",
+            title: "Databases",
         },
         {
-            id: "design",
-            title: "Design",
+            id: "dotnet",
+            title: ".Net",
         },
         {
-            id: "content",
-            title: "Content",
+            id: "proglangs",
+            title: "Other Programming Languages",
         },
     ];
 
     useEffect(() => {
         switch (selected) {
-            case "featured":
-                setData(featuredPortfolio);
+            case "javatech":
+                setData(javaTechnologiesPortfolio);
                 break;
             case "web":
-                setData(webPortfolio);
+                setData(webDevelopmentPortfolio);
                 break;
-            case "mobile":
-                setData(mobilePortfolio);
+            case "database":
+                setData(databasePortfolio);
                 break;
-            case "design":
-                setData(designPortfolio);
+            case "dotnet":
+                setData(dotnetPortfolio);
                 break;
-            case "content":
-                setData(contentPortfolio);
+            case "proglangs":
+                setData(progLangsPortfolio);
                 break;
             default:
-                setData(featuredPortfolio);
+                setData(javaTechnologiesPortfolio);
         }
     }, [selected]);
 
@@ -90,9 +90,10 @@ export default function Portfolio() {
                     <div className="item">
                         <img src={d.img} alt="" />
                         <h3>
+                            {/* {d.title} */}
                             <StyledRating
                                 name="customized-color"
-                                defaultValue={2.5}
+                                value={d.value}
                                 getLabelText={(value) =>
                                     `${value} Heart${value !== 1 ? "s" : ""}`
                                 }

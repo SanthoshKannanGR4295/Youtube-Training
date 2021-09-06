@@ -71,11 +71,11 @@ export default function EduPro() {
                     </TimelineSeparator>
                     <TimelineContent>
                         <Paper elevation={3} className={classes.paper}>
-                            <Typography variant="h6" component="h1">
-                                B.E CSE
+                            <Typography variant="h5" component="h1">
+                                Bachelor of Engineering - Computer Science
                             </Typography>
                             <Typography variant="h6" component="h1">
-                                Sona
+                                Sona College of Technology, Salem, Tamil Nadu
                             </Typography>
                             <Typography>90%</Typography>
                         </Paper>
@@ -123,7 +123,12 @@ export default function EduPro() {
                     </TimelineSeparator>
                     <TimelineContent>
                         <Paper elevation={3} className={classes.paper}>
-                            <Typography variant="h6">Infoview</Typography>
+                            <Typography variant="h5">
+                                InfoView Technologies Pvt. Ltd.
+                            </Typography>
+                            <Typography variant="h6">
+                                Chennai, Tamil Nadu
+                            </Typography>
                         </Paper>
                     </TimelineContent>
                 </TimelineItem>
@@ -182,7 +187,12 @@ export default function EduPro() {
                     </TimelineSeparator>
                     <TimelineContent>
                         <Paper elevation={3} className={classes.paper}>
-                            <Typography variant="h6">Virtusa</Typography>
+                            <Typography variant="h5">
+                                Virtusa Consulting Services Pvt. Ltd.
+                            </Typography>
+                            <Typography variant="h6">
+                                Chennai, Tamil Nadu
+                            </Typography>
                         </Paper>
                     </TimelineContent>
                 </TimelineItem>

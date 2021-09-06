@@ -10,7 +10,12 @@ export default function Intro() {
             showCursor: true,
             backDelay: 1500,
             backSpeed: 60,
-            strings: ["Full", "Stack", "Developer", "Full Stack Developer"],
+            strings: [
+                "Full Stack Developer",
+                "Code Reviewer",
+                "Bug Fixer",
+                "Software Tester",
+            ],
         });
     }, []);
 
@@ -24,9 +29,9 @@ export default function Intro() {
             <div className="right">
                 <div className="wrapper">
                     <h2>Hi There, I'm</h2>
-                    <h1>Santhosh Kannan G R</h1>
+                    <h1>Santhosh Kannan G R, </h1>
                     <h3>
-                        <span ref={textRef}></span>
+                        a <span ref={textRef}></span>
                     </h3>
                 </div>
                 <img

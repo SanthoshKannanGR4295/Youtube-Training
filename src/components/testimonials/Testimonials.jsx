@@ -7,7 +7,7 @@ export default function Testimonials() {
             id: 1,
             name: "Tom Durden",
             title: "Senior Developer",
-            img: "/assets/certificate-1.png",
+            img: "./assets/certificate-1.png",
             icon: "assets/twitter.png",
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
         },

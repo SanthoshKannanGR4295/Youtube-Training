@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Youtube-Training/static/css/main.1bc723f8.chunk.css",
-    "main.js": "/Youtube-Training/static/js/main.5d5f603c.chunk.js",
-    "main.js.map": "/Youtube-Training/static/js/main.5d5f603c.chunk.js.map",
+    "main.css": "/Youtube-Training/static/css/main.1544baed.chunk.css",
+    "main.js": "/Youtube-Training/static/js/main.c2649de7.chunk.js",
+    "main.js.map": "/Youtube-Training/static/js/main.c2649de7.chunk.js.map",
     "runtime-main.js": "/Youtube-Training/static/js/runtime-main.79853556.js",
     "runtime-main.js.map": "/Youtube-Training/static/js/runtime-main.79853556.js.map",
-    "static/js/2.f5f8c5a7.chunk.js": "/Youtube-Training/static/js/2.f5f8c5a7.chunk.js",
-    "static/js/2.f5f8c5a7.chunk.js.map": "/Youtube-Training/static/js/2.f5f8c5a7.chunk.js.map",
+    "static/js/2.6df4d0bd.chunk.js": "/Youtube-Training/static/js/2.6df4d0bd.chunk.js",
+    "static/js/2.6df4d0bd.chunk.js.map": "/Youtube-Training/static/js/2.6df4d0bd.chunk.js.map",
     "index.html": "/Youtube-Training/index.html",
-    "static/css/main.1bc723f8.chunk.css.map": "/Youtube-Training/static/css/main.1bc723f8.chunk.css.map",
-    "static/js/2.f5f8c5a7.chunk.js.LICENSE.txt": "/Youtube-Training/static/js/2.f5f8c5a7.chunk.js.LICENSE.txt"
+    "static/css/main.1544baed.chunk.css.map": "/Youtube-Training/static/css/main.1544baed.chunk.css.map",
+    "static/js/2.6df4d0bd.chunk.js.LICENSE.txt": "/Youtube-Training/static/js/2.6df4d0bd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.79853556.js",
-    "static/js/2.f5f8c5a7.chunk.js",
-    "static/css/main.1bc723f8.chunk.css",
-    "static/js/main.5d5f603c.chunk.js"
+    "static/js/2.6df4d0bd.chunk.js",
+    "static/css/main.1544baed.chunk.css",
+    "static/js/main.c2649de7.chunk.js"
   ]
 }

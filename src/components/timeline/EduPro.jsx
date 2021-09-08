@@ -28,8 +28,11 @@ const useStyles = makeStyles((theme) => ({
     roots: {
         flex: "unset",
     },
+    oppositeContent: {
+        // transform: "translateY(10%)",
+    },
     paper: {
-        padding: "6px 16px",
+        padding: "0.75rem",
     },
     subPaper: {
         display: "inline-flex",
@@ -53,12 +56,14 @@ export default function EduPro() {
         <div className="eduPro" id="eduPro">
             <h1>{`Education & Employment`}</h1>
             <Timeline
-                style={{ minWidth: "95vw" }}
+                style={{ minWidth: "97%" }}
                 align="alternate"
                 className="eduProTimeline"
             >
                 <TimelineItem>
-                    <TimelineOppositeContent>
+                    <TimelineOppositeContent
+                        className={classes.oppositeContent}
+                    >
                         <Typography variant="h6" color="primary">
                             2016
                         </Typography>
@@ -71,10 +76,10 @@ export default function EduPro() {
                     </TimelineSeparator>
                     <TimelineContent>
                         <Paper elevation={3} className={classes.paper}>
-                            <Typography variant="h5" component="h1">
+                            <Typography variant="h5">
                                 Bachelor of Engineering - Computer Science
                             </Typography>
-                            <Typography variant="h6" component="h1">
+                            <Typography variant="h6">
                                 Sona College of Technology, Salem, Tamil Nadu
                             </Typography>
                             <Typography>90%</Typography>
@@ -108,7 +113,9 @@ export default function EduPro() {
                     </TimelineContent>
                 </TimelineItem> */}
                 <TimelineItem>
-                    <TimelineOppositeContent>
+                    <TimelineOppositeContent
+                        className={classes.oppositeContent}
+                    >
                         <Typography variant="h6" color="primary">
                             2016
                         </Typography>
@@ -133,13 +140,16 @@ export default function EduPro() {
                     </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
-                    <TimelineOppositeContent>
+                    <TimelineOppositeContent
+                        className={classes.oppositeContent}
+                    >
                         <Paper
                             elevation={3}
                             className={[classes.paper, classes.subPaper]}
                         >
                             <Typography variant="h6">
                                 Trainee Engineer
+                                <Typography />
                             </Typography>
                         </Paper>
                     </TimelineOppositeContent>
@@ -172,7 +182,9 @@ export default function EduPro() {
                     </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
-                    <TimelineOppositeContent>
+                    <TimelineOppositeContent
+                        className={classes.oppositeContent}
+                    >
                         <Typography variant="h6" color="primary">
                             2019
                         </Typography>
@@ -197,7 +209,9 @@ export default function EduPro() {
                     </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
-                    <TimelineOppositeContent>
+                    <TimelineOppositeContent
+                        className={classes.oppositeContent}
+                    >
                         <Paper
                             elevation={3}
                             className={[classes.paper, classes.subPaper]}
@@ -216,7 +230,9 @@ export default function EduPro() {
                     <TimelineContent></TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
-                    <TimelineOppositeContent>
+                    <TimelineOppositeContent
+                        className={classes.oppositeContent}
+                    >
                         <Typography variant="h6" color="primary">
                             Present
                         </Typography>

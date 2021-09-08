@@ -6,14 +6,14 @@
     flex-direction: column;
     align-items: center;
 
-    @include mobile {
+    @include media(mobile, tablet) {
         justify-content: space-around;
     }
 
     h1 {
         font-size: 50px;
 
-        @include mobile {
+        @include media(mobile, tablet) {
             font-size: 20px;
         }
     }
@@ -23,9 +23,23 @@
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
+        // justify-content: center;
         flex-wrap: wrap;
-        overflow: hidden;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        & {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+
+        @include media(mobile, tablet) {
+            width: 100%;
+        }
         transition: z-index 1s ease-out, transform 1s ease-out;
         &.block {
             display: block;
@@ -39,13 +53,18 @@
                     cursor: auto;
                     width: 70%;
                     height: 90%;
+                    flex: none;
                     // width: 90%;
                     // height: 90%;
                     img {
                         width: 100%;
                         height: 100%;
                         object-fit: fill;
-                        border-radius: 10px;
+                        border-radius: inherit;
+                    }
+                    @include media(mobile, tablet) {
+                        width: 90%;
+                        height: auto;
                     }
                 }
                 &:not(.hovered) {
@@ -54,13 +73,13 @@
             }
         }
 
-        @include mobile {
-            flex-direction: column;
+        @include media(mobile, tablet) {
+            // flex-direction: column;
             height: 100%;
         }
 
         .card {
-            width: 250px;
+            // width: 250px;
             // height: 70%;
             border-radius: 10px;
             box-shadow: 0px 0px 15px -8px black;
@@ -68,16 +87,27 @@
             flex-direction: column;
             justify-content: space-around;
             padding: 10px;
-            margin: 10px;
+            margin: 20px;
             cursor: pointer;
             transition: width 1s ease-out, height 1s ease-out;
+            flex: 0 1 26%;
             & img {
-                aspect-ratio: 3/2;
+                // aspect-ratio: 3/2;
+                width: 100%;
+                object-fit: fill;
+                border-radius: inherit;
             }
 
-            @include mobile {
-                height: 180px;
-                margin: 10px 0;
+            @include media(mobile, tablet) {
+                // height: 180px;
+                width: 90%;
+                margin: 10px;
+                padding: 5px;
+                flex: none;
+                &.hovered {
+                    // width: auto;
+                    // height: auto;
+                }
             }
 
             &.featured {
@@ -85,7 +115,7 @@
                 height: 75%;
                 margin: 0 30px;
 
-                @include mobile {
+                @include media(mobile, tablet) {
                     width: 250px;
                     height: 180px;
                     margin: 1px;
@@ -113,7 +143,7 @@
                         object-fit: cover;
                         margin: 0 30px;
 
-                        @include mobile {
+                        @include media(mobile, tablet) {
                             width: 30px;
                             height: 30px;
                         }
@@ -126,7 +156,7 @@
                 border-radius: 10px;
                 background-color: rgb(250, 244, 245);
 
-                @include mobile {
+                @include media(mobile, tablet) {
                     font-size: 12px;
                     padding: 5px;
                 }
@@ -140,13 +170,13 @@
                 h3 {
                     margin-bottom: 5px;
 
-                    @include mobile {
+                    @include media(mobile, tablet) {
                         font-size: 14px;
                     }
                 }
                 h4 {
                     color: rgb(121, 115, 115);
-                    @include mobile {
+                    @include media(mobile, tablet) {
                         font-size: 13px;
                     }
                 }

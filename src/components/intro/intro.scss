@@ -3,8 +3,11 @@
 .intro {
     background-color: white;
     display: flex;
-
-    @include mobile {
+    @include laptop {
+        padding: 1rem;
+        width: auto;
+    }
+    @include media(mobile, tablet) {
         flex-direction: column;
         align-items: center;
     }
@@ -12,10 +15,15 @@
     .left {
         flex: 0.5;
         overflow: hidden;
+        @include laptop {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
 
         .imgContainer {
-            width: 700px;
-            height: 700px;
+            width: 95%;
+            height: 98%;
             background-color: $mainColor;
             border-radius: 50%;
             display: flex;
@@ -23,15 +31,23 @@
             justify-content: center;
             float: right;
             overflow-x: hidden;
+            @include laptop {
+                width: 95%;
+                height: 70%;
+            }
 
-            @include mobile {
+            @include media(mobile, tablet) {
                 align-items: flex-start;
+                width: 700px;
+                height: 700px;
             }
 
             img {
                 height: 100%;
-
-                @include mobile {
+                @include media(mobile) {
+                    height: 50%;
+                }
+                @include media(tablet) {
                     height: 50%;
                 }
             }
@@ -49,7 +65,7 @@
             flex-direction: column;
             justify-content: center;
 
-            @include mobile {
+            @include media(mobile, tablet) {
                 padding-left: 0;
                 align-items: center;
             }
@@ -57,9 +73,15 @@
             h1 {
                 font-size: 60px;
                 margin: 10px 0;
-
-                @include mobile {
-                    font-size: 40px;
+                span {
+                    font-size: inherit;
+                    color: crimson;
+                }
+                @include laptop {
+                    font-size: 30px;
+                }
+                @include media(mobile, tablet) {
+                    font-size: 20px;
                 }
             }
             h2 {
@@ -68,7 +90,7 @@
             h3 {
                 font-size: 30px;
 
-                @include mobile {
+                @include media(mobile, tablet) {
                     font-size: 20px;
                 }
 

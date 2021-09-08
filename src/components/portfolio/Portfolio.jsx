@@ -11,10 +11,12 @@ import {
 } from "../../data";
 import { withStyles } from "@material-ui/styles";
 import { Star } from "@material-ui/icons";
+import { nearestPerfectSquare } from "../../commons";
 
 const StyledRating = withStyles({
     root: {
         opacity: "1 !important",
+        fontSize: "inherit",
     },
     iconFilled: {
         color: "#ffff00",
@@ -70,6 +72,7 @@ export default function Portfolio() {
             default:
                 setData(javaTechnologiesPortfolio);
         }
+        document.querySelector("#portfolio .container").scrollTop = 0;
     }, [selected]);
 
     return (
@@ -87,9 +90,26 @@ export default function Portfolio() {
             </ul>
             <div className="container">
                 {data.map((d) => (
-                    <div className="item">
+                    <div
+                        className="item"
+                        container-grid={data.length}
+                        // style={{
+                        //     flex: `0 1 ${
+                        //         100 / (nearestPerfectSquare(data.length) * 2)
+                        //     }%`,
+                        // }}
+                    >
                         <img src={d.img} alt="" />
-                        <h3>
+                        <h3
+                        // style={{
+                        //     transform: `scale(${
+                        //         (100 /
+                        //             (nearestPerfectSquare(data.length) *
+                        //                 2)) *
+                        //         8
+                        //     }%)`,
+                        // }}
+                        >
                             {/* {d.title} */}
                             <StyledRating
                                 name="customized-color"

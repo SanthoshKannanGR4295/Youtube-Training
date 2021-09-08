@@ -1,8 +1,130 @@
 import "./testimonials.scss";
 import { useEffect, useState } from "react";
+import { nearestPerfectSquare } from "../../commons";
 
 export default function Testimonials() {
     const data = [
+        {
+            id: 1,
+            name: "Tom Durden",
+            title: "Senior Developer",
+            img: "./assets/certificate-1.png",
+            icon: "assets/twitter.png",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
+        },
+        {
+            id: 2,
+            name: "Alex Kalinski",
+            title: "Co-Founder of DELKA",
+            img: "https://images.pexels.com/photos/428321/pexels-photo-428321.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "assets/youtube.png",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem recusandae perspiciatis ducimus vel hic temporibus. ",
+            // featured: true,
+        },
+        {
+            id: 3,
+            name: "Martin Harold",
+            title: "CEO of ALBI",
+            img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "assets/linkedin.png",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+        },
+        {
+            id: 3,
+            name: "Martin Harold",
+            title: "CEO of ALBI",
+            img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "assets/linkedin.png",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+        },
+        {
+            id: 3,
+            name: "Martin Harold",
+            title: "CEO of ALBI",
+            img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "assets/linkedin.png",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+        },
+        {
+            id: 3,
+            name: "Martin Harold",
+            title: "CEO of ALBI",
+            img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "assets/linkedin.png",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+        },
+        {
+            id: 3,
+            name: "Martin Harold",
+            title: "CEO of ALBI",
+            img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "assets/linkedin.png",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+        },
+        {
+            id: 3,
+            name: "Martin Harold",
+            title: "CEO of ALBI",
+            img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "assets/linkedin.png",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+        },
+        {
+            id: 3,
+            name: "Martin Harold",
+            title: "CEO of ALBI",
+            img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "assets/linkedin.png",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+        },
+        {
+            id: 3,
+            name: "Martin Harold",
+            title: "CEO of ALBI",
+            img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "assets/linkedin.png",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+        },
+        {
+            id: 3,
+            name: "Martin Harold",
+            title: "CEO of ALBI",
+            img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "assets/linkedin.png",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+        },
+        {
+            id: 3,
+            name: "Martin Harold",
+            title: "CEO of ALBI",
+            img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "assets/linkedin.png",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+        },
+        {
+            id: 3,
+            name: "Martin Harold",
+            title: "CEO of ALBI",
+            img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "assets/linkedin.png",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+        },
+        {
+            id: 3,
+            name: "Martin Harold",
+            title: "CEO of ALBI",
+            img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "assets/linkedin.png",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+        },
+        {
+            id: 3,
+            name: "Martin Harold",
+            title: "CEO of ALBI",
+            img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+            icon: "assets/linkedin.png",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+        },
         {
             id: 1,
             name: "Tom Durden",
@@ -187,6 +309,12 @@ export default function Testimonials() {
                     {data.map((d, index) => (
                         <div
                             className={d.featured ? "card featured" : "card"}
+                            // style={{
+                            //     flex: `0 1 ${
+                            //         100 /
+                            //         (nearestPerfectSquare(data.length) * 2)
+                            //     }%`,
+                            // }}
                             key={index}
                             onClickCapture={(e) => {
                                 setShowFull(index);
@@ -215,15 +343,18 @@ export default function Testimonials() {
                 >
                     {filteredData.map((d, index) => (
                         <div
-                            className={
-                                d.featured
-                                    ? "card featured hovered"
-                                    : "card hovered"
+                            className={[
+                                d.featured ? "card featured" : "card",
+                                showFull !== null ? "hovered" : "",
+                            ].join(" ")}
+                            style={
+                                showFull === null
+                                    ? {
+                                          width: "0%",
+                                          height: "0%",
+                                      }
+                                    : {}
                             }
-                            style={{
-                                width: `${showFull === null ? "0%" : "70%"}`,
-                                height: `${showFull === null ? "0%" : "90%"}`,
-                            }}
                             key={index}
                             onClick={(e) => {
                                 e.stopPropagation();

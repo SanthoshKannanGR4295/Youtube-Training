@@ -1,9 +1,82 @@
 $mainColor: #575f74f2;
 
-$width: 768px;
+$mobileWidth: 425px;
+$tabletWidth: 768px;
+$laptopWidth: 1024px;
+$laptopLWidth: 1440px;
+
+$breakpoints: (
+    mobile: (
+        0px,
+        425px,
+    ),
+    tablet: (
+        425px,
+        768px,
+    ),
+    laptop: (
+        768px,
+        1024px,
+    ),
+    laptopL: (
+        1024px,
+        1440px,
+    ),
+    4k: (
+        1440px,
+        2560px,
+    ),
+);
+
+@function getMinWidth($breakpoints, $key) {
+    $breakpoint: map-get($breakpoints, $key);
+    @return nth($breakpoint, 1) + 1;
+}
+
+@function getMaxWidth($breakpoints, $key) {
+    $breakpoint: map-get($breakpoints, $key);
+    @return nth($breakpoint, 2) + 1;
+}
+
+@mixin media($keys...) {
+    @each $key in $keys {
+        @media (min-width: getMinWidth($breakpoints, $key)) and (max-width: getMaxWidth($breakpoints, $key)) {
+            @content;
+        }
+    }
+}
+@mixin mediaWidth($min-width, $max-width) {
+    @media (min-width: $min-width) and (max-width: $max-width) {
+        @content;
+    }
+}
+
+@mixin mediaHeight($min-height, $max-height) {
+    @media (min-height: $min-height) and (max-height: $max-height) {
+        @content;
+    }
+}
 
 @mixin mobile {
-    @media (max-width: #{$width}) {
+    @media (max-width: #{$mobileWidth}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width:#{$mobileWidth+1}) and (max-width: #{$tabletWidth}) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width:#{$tabletWidth+1}) and (max-width: #{$laptopWidth}) {
+        @content;
+    }
+}
+
+@mixin laptopL {
+    @media (min-width:#{$laptopWidth+1}) and (max-width: #{$laptopLWidth}) {
         @content;
     }
 }
